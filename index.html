@@ -1,0 +1,611 @@
+<!doctype html>
+<html lang="es" data-lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Evolución · Mindful Wellness</title>
+<meta name="description" content="Evolución: 8 semanas de mentoría individual con Monica Villalba para transformar tu mentalidad, fortalecer tu liderazgo y construir la vida que deseas crear.">
+<meta property="og:title" content="Evolución · Mentoría estratégica y crecimiento personal">
+<meta property="og:description" content="8 semanas · mentoría individual · virtual y en El Jardín de Mindful Wellness.">
+<meta property="og:image" content="https://yourmindfulwellnessny.github.io/evolucion/assets/workbook.jpg">
+<meta property="og:url" content="https://yourmindfulwellnessny.github.io/evolucion/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* =====================================================
+   Mismo formato y colores que la página de la cajita.
+   Precio, cuotas, pagos y WhatsApp → archivo config.js
+   ===================================================== */
+:root{
+  --wine:#4E1A38; --wine-2:#6B2A4E; --plum-ink:#2E0F22;
+  --cream:#FBF6EF; --gold:#C9A45C; --gold-soft:#E7D3A6;
+  --lilac:#EEE4F3; --lilac-2:#DCCBE8;
+  --purple:#4C0054; --green:#183D23; --sage:#7FA58A;
+  --ink:#2B2230; --muted:#6E6175; --line:#E6DCEB; --white:#FFFFFF;
+  color-scheme:light;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Nunito Sans",system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+[hidden]{display:none!important}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.serif{font-family:"Cormorant Garamond",Georgia,serif}
+.wrap{max-width:1080px;margin:0 auto;padding-inline:20px}
+html[data-lang="es"] [lang="en"]{display:none!important}
+html[data-lang="en"] [lang="es"]{display:none!important}
+h1,h2,h3{text-wrap:balance}
+
+/* ---------- barra superior ---------- */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(78,26,56,.96);backdrop-filter:blur(6px);color:var(--cream)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:56px;gap:12px}
+.brand{font-family:"Cormorant Garamond",serif;font-size:1.15rem;font-style:italic;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.top-actions{display:flex;gap:8px;align-items:center}
+.lang{display:flex;border:1px solid rgba(231,211,166,.5);border-radius:99px;overflow:hidden}
+.lang button{background:none;border:0;color:var(--gold-soft);font:600 .78rem "Nunito Sans";padding:6px 10px;cursor:pointer}
+.lang button.on{background:var(--gold);color:var(--plum-ink)}
+.btn-mini{background:var(--gold);color:var(--plum-ink);text-decoration:none;font-weight:700;font-size:.85rem;padding:8px 14px;border-radius:99px;white-space:nowrap}
+
+/* ---------- hero ---------- */
+.hero{background:radial-gradient(120% 90% at 50% 10%,#6A2A57 0%,#4A1B3D 50%,#2A0D21 100%);color:var(--cream);position:relative;overflow:hidden;padding-block:56px 72px;text-align:center}
+.hero::before{content:"";position:absolute;inset:18px;border:1px solid rgba(201,164,92,.45);border-radius:22px;pointer-events:none}
+#petals{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
+.hero .wrap{position:relative;z-index:1}
+.logo-badge{width:150px;margin:0 auto 26px;background:var(--cream);border-radius:20px;padding:12px 14px}
+.eyebrow{display:inline-block;letter-spacing:.22em;text-transform:uppercase;font-size:.74rem;font-weight:700;color:var(--gold-soft);border:1px solid rgba(201,164,92,.6);border-radius:99px;padding:6px 14px;margin-bottom:20px}
+.hero h1{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(3rem,10vw,5.4rem);line-height:1;letter-spacing:.04em;margin-bottom:10px}
+.hero .subt{font-family:"Cormorant Garamond",serif;font-style:italic;color:var(--gold-soft);font-size:clamp(1.3rem,3.6vw,1.7rem);margin-bottom:18px}
+.hero p.lead{max-width:580px;margin:0 auto 30px;font-size:1.1rem;color:#F1E5EC}
+.cta{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:var(--plum-ink);font-weight:700;font-size:1.05rem;text-decoration:none;padding:16px 30px;border-radius:99px;box-shadow:0 10px 30px rgba(0,0,0,.25);transition:transform .15s}
+.cta:hover{transform:translateY(-2px)}
+.hero small{display:block;margin-top:14px;color:var(--gold-soft);font-size:.85rem}
+.fan{position:relative;height:330px;max-width:560px;margin:44px auto 0}
+.fan .shot{position:absolute;left:50%;top:26px;width:130px;transform-origin:50% 120%}
+.fan .shot img{width:100%;border-radius:10px;box-shadow:0 18px 40px rgba(20,4,14,.55)}
+.fan .s1{transform:translateX(-50%) rotate(-11deg) translateX(-70px)}
+.fan .s3{transform:translateX(-50%) rotate(11deg) translateX(70px)}
+.fan .s2{transform:translateX(-50%);z-index:2;top:0;width:200px;animation:float 6s ease-in-out infinite}
+.fan .s2 img{border:1px solid rgba(201,164,92,.7)}
+@keyframes float{50%{transform:translateX(-50%) translateY(-8px)}}
+
+/* ---------- secciones ---------- */
+section{padding-block:72px}
+.kicker{text-align:center;letter-spacing:.2em;text-transform:uppercase;font-size:.75rem;font-weight:700;color:var(--wine-2);margin-bottom:10px}
+h2{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(2rem,5vw,2.9rem);line-height:1.1;text-align:center;color:var(--wine);margin-bottom:16px}
+h2 em{color:var(--green);font-weight:500}
+.sub{text-align:center;max-width:640px;margin:0 auto 40px;color:var(--muted);font-size:1.05rem}
+
+.story{background:var(--white)}
+.story-grid{display:grid;grid-template-columns:1fr;gap:28px;align-items:center;max-width:860px;margin:0 auto}
+.story blockquote{font-family:"Cormorant Garamond",serif;font-size:1.55rem;line-height:1.35;color:var(--wine);font-style:italic}
+.story p{color:var(--muted);margin-top:14px}
+.story p strong{color:var(--wine)}
+
+.routes{display:grid;grid-template-columns:1fr;gap:16px;max-width:820px;margin:0 auto}
+.route{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:24px;text-align:center}
+.route h3{font-family:"Cormorant Garamond",serif;font-size:1.6rem;color:var(--wine);line-height:1.15;margin-bottom:6px}
+.route p{color:var(--muted);font-size:.97rem}
+
+/* las 3 fases */
+.path{background:var(--lilac)}
+.steps{display:grid;grid-template-columns:1fr;gap:16px}
+.step{background:var(--white);border:1px solid var(--lilac-2);border-radius:18px;padding:24px;min-width:0}
+.step .n{width:44px;height:44px;border-radius:50%;background:var(--wine);color:var(--gold-soft);display:grid;place-items:center;margin:0 auto 12px;font-family:"Cormorant Garamond",serif;font-size:1.4rem;font-weight:600}
+.step h3{font-family:"Cormorant Garamond",serif;font-size:1.7rem;color:var(--wine);text-align:center;line-height:1.1}
+.step .ph{color:var(--muted);font-size:.92rem;text-align:center;margin-bottom:10px}
+.weeks{list-style:none}
+.weeks li{padding:12px 0;border-top:1px solid var(--line)}
+.weeks .wk{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--purple)}
+.weeks strong{display:block;color:var(--ink);line-height:1.3}
+.weeks span.d{display:block;color:var(--muted);font-size:.92rem}
+.garden{display:inline-block;margin-top:6px;font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:var(--sage);padding:3px 9px;border-radius:99px}
+
+/* incluye y resultados */
+.inside{display:grid;grid-template-columns:1fr;gap:14px;max-width:820px;margin:0 auto}
+.inside li{list-style:none;display:flex;gap:14px;align-items:flex-start;background:var(--white);border:1px solid var(--line);border-radius:16px;padding:16px 18px}
+.inside li span.ic{flex:none;width:32px;height:32px;border-radius:50%;background:var(--lilac);color:var(--purple);display:grid;place-items:center;font-weight:700}
+.inside li strong{display:block;color:var(--wine)}
+.inside li em{font-style:normal;color:var(--muted);font-size:.95rem}
+.results{background:var(--white)}
+.results .inside li{background:var(--cream)}
+.results .inside li span.ic{background:var(--green);color:var(--gold-soft)}
+.res-note{text-align:center;max-width:620px;margin:26px auto 0;color:var(--muted);font-size:.95rem}
+
+/* ---------- inscripción ---------- */
+.order{background:linear-gradient(180deg,var(--wine) 0%,var(--plum-ink) 100%);color:var(--cream)}
+.order h2{color:var(--cream)} .order h2 em{color:var(--gold-soft)} .order .kicker{color:var(--gold-soft)}
+.order .sub{color:#E9DCE4}
+.plans{display:grid;grid-template-columns:1fr;gap:22px;max-width:880px;margin:0 auto}
+.plan{background:var(--cream);color:var(--ink);border-radius:22px;padding:30px 24px;position:relative;border:2px solid transparent;min-width:0}
+.plan.best{border-color:var(--gold)}
+.tag{position:absolute;top:-13px;left:24px;background:var(--gold);color:var(--plum-ink);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:99px}
+.plan h3{font-family:"Cormorant Garamond",serif;font-size:1.8rem;color:var(--wine);line-height:1.1}
+.plan .desc{color:var(--muted);font-size:.95rem;margin:6px 0 16px}
+.price{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:6px}
+.price .now{font-family:"Cormorant Garamond",serif;font-size:3rem;font-weight:600;color:var(--purple);line-height:1;font-variant-numeric:tabular-nums}
+.was{color:var(--muted);font-size:.95rem}
+.plan ul.list{list-style:none;margin:14px 0 18px;display:grid;gap:6px}
+.plan ul.list li{padding-left:24px;position:relative;font-size:.95rem}
+.plan ul.list li::before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:700}
+.field{margin-bottom:12px}
+.field label{display:block;font-size:.82rem;font-weight:700;color:var(--wine);margin-bottom:6px}
+.field input,.field select,.field textarea{width:100%;font:inherit;font-size:1rem;color:var(--ink);background:var(--white);border:1.5px solid var(--lilac-2);border-radius:12px;padding:11px 13px}
+.field textarea{min-height:80px;resize:vertical}
+.row2{display:grid;grid-template-columns:1fr;gap:0 12px}
+.seg{display:flex;gap:8px;flex-wrap:wrap}
+.seg button{flex:1;min-width:110px;border:1.5px solid var(--lilac-2);background:var(--white);color:var(--purple);border-radius:12px;padding:10px;font:600 .9rem "Nunito Sans";cursor:pointer}
+.seg button.on{background:var(--purple);border-color:var(--purple);color:#fff}
+.pay{display:block;width:100%;text-align:center;text-decoration:none;background:var(--wine);color:var(--cream);font-weight:700;padding:15px;border-radius:14px;margin-top:6px;border:0;font-size:1rem;cursor:pointer;font-family:"Nunito Sans"}
+.pay:hover{background:var(--wine-2)}
+.pay.alt{background:transparent;color:var(--wine);border:1.5px solid var(--wine);margin-top:10px}
+.pay.alt:hover{background:var(--lilac)}
+.pay.wa{background:#25D366;color:#073B1E}
+.note{font-size:.8rem;color:var(--muted);margin-top:10px;text-align:center}
+
+.zelle{max-width:880px;margin:26px auto 0;background:rgba(255,255,255,.06);border:1px solid rgba(201,164,92,.4);border-radius:22px;padding:24px;display:grid;grid-template-columns:1fr;gap:20px;align-items:center}
+.zelle>*{min-width:0}
+.zelle img{width:190px;border-radius:14px;margin:0 auto;background:#fff}
+.zelle h3{font-family:"Cormorant Garamond",serif;font-size:1.6rem;color:var(--gold-soft)}
+.zelle p{color:#EADFE6;font-size:.95rem;margin-top:6px}
+.zelle .zcode{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:12px;color:#EADFE6;font-size:.88rem}
+.zelle .zcode b{font-size:1.05rem;color:var(--gold-soft);letter-spacing:.08em;border:1px solid rgba(201,164,92,.6);border-radius:8px;padding:4px 10px;user-select:all}
+.zelle .zcode button{background:none;border:1px solid rgba(231,211,166,.5);color:var(--gold-soft);border-radius:99px;padding:5px 12px;font:600 .8rem "Nunito Sans";cursor:pointer}
+.zform{margin-top:14px}
+.zform label{display:block;font-size:.82rem;font-weight:700;color:var(--gold-soft);margin-bottom:6px}
+.zform input{width:100%;font:inherit;font-size:1rem;border:0;border-radius:12px;padding:11px 13px;margin-bottom:12px;background:var(--cream);color:var(--ink)}
+.zelle .note{color:#CDBCC6}
+
+/* ---------- coach ---------- */
+.about-grid{display:grid;grid-template-columns:1fr;gap:26px;align-items:center;max-width:820px;margin:0 auto;text-align:center}
+.about img{width:170px;height:170px;border-radius:50%;object-fit:cover;margin:0 auto;border:4px solid var(--lilac)}
+.about .kicker{text-align:inherit}
+.about h3{font-family:"Cormorant Garamond",serif;font-size:2rem;color:var(--wine)}
+.about .role{color:var(--purple);font-weight:600;font-size:.92rem;margin-bottom:10px}
+.about p{color:var(--muted)}
+.about blockquote{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.35rem;line-height:1.35;color:var(--wine);margin-top:14px}
+
+/* ---------- preguntas ---------- */
+.faq{background:var(--white)}
+details{max-width:760px;margin:0 auto 12px;border:1px solid var(--line);border-radius:16px;background:var(--cream);padding:4px 20px}
+summary{cursor:pointer;list-style:none;font-weight:700;color:var(--wine);padding:14px 0;display:flex;justify-content:space-between;gap:12px}
+summary::after{content:"+";font-size:1.3rem;line-height:1;color:var(--gold)}
+details[open] summary::after{content:"–"}
+details p{color:var(--muted);padding-bottom:16px}
+
+footer{background:var(--plum-ink);color:#CDBCC6;text-align:center;padding:40px 20px 90px;font-size:.88rem}
+footer a{color:var(--gold-soft);text-decoration:none}
+footer .links{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin:12px 0}
+footer .motto{font-family:"Cormorant Garamond",serif;font-size:1.6rem;line-height:1.3;color:var(--gold-soft);font-style:italic}
+
+.buybar{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:30;display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--wine);color:var(--cream);border:1px solid rgba(201,164,92,.5);border-radius:18px;padding:10px 12px 10px 18px;box-shadow:0 10px 30px rgba(0,0,0,.3);transform:translateY(160%);transition:transform .3s}
+.buybar.show{transform:none}
+.buybar b{font-family:"Cormorant Garamond",serif;font-size:1.35rem;color:var(--gold-soft)}
+.buybar span{font-size:.8rem;display:block;color:#E9DCE4}
+.buybar b span{display:inline;font-size:inherit;color:inherit}
+@media(max-width:420px){.brand .sm{display:none}}
+
+@media(prefers-reduced-motion:reduce){.fan .s2{animation:none}.cta,.buybar{transition:none}html{scroll-behavior:auto}}
+@media(min-width:760px){
+  .steps{grid-template-columns:repeat(3,1fr)}
+  .routes{grid-template-columns:1fr 1fr}
+  .inside{grid-template-columns:1fr 1fr}
+  .plans{grid-template-columns:1fr 1fr}
+  .row2{grid-template-columns:1fr 1fr}
+  .zelle{grid-template-columns:200px 1fr;padding:28px 34px}
+  .story-grid{grid-template-columns:1.1fr 1fr}
+  .about-grid{grid-template-columns:200px 1fr;text-align:left}
+  .about img{width:190px;height:190px}
+  .fan{height:470px}
+  .fan .shot{width:200px}.fan .s2{width:290px}
+  .fan .s1{transform:translateX(-50%) rotate(-11deg) translateX(-150px)}
+  .fan .s3{transform:translateX(-50%) rotate(11deg) translateX(150px)}
+  .buybar{display:none}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brand">Evolución<span class="sm"> · <span lang="es">Mentoría</span><span lang="en">Mentoring</span></span></div>
+    <div class="top-actions">
+      <div class="lang" role="group" aria-label="Idioma / Language">
+        <button type="button" data-set-lang="es" class="on">ES</button>
+        <button type="button" data-set-lang="en">EN</button>
+      </div>
+      <a class="btn-mini" href="#empezar"><span lang="es">Llamada gratis</span><span lang="en">Free call</span></a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <canvas id="petals" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <img class="logo-badge" src="assets/logo.png" alt="Mindful Wellness">
+    <div class="eyebrow"><span lang="es">Mentoría híbrida · 8 semanas</span><span lang="en">Hybrid mentoring · 8 weeks</span></div>
+    <h1>EVOLUCIÓN</h1>
+    <p class="subt"><span lang="es">Mentoría estratégica y crecimiento personal</span><span lang="en">Strategic mentoring and personal growth</span></p>
+    <p class="lead" lang="es">8 semanas para transformar tu mentalidad, fortalecer tu liderazgo y construir la vida que deseas crear. Un acompañamiento uno a uno, conmigo, virtual y en el jardín de Mindful Wellness.</p>
+    <p class="lead" lang="en">8 weeks to transform your mindset, strengthen your leadership and build the life you want to create. One-on-one mentoring with me, online and in the Mindful Wellness garden.</p>
+    <a class="cta" href="#empezar"><span lang="es">Agenda tu llamada gratuita</span><span lang="en">Book your free call</span> →</a>
+    <small><span lang="es">20 minutos, sin compromiso · Programa completo: </span><span lang="en">20 minutes, no commitment · Full program: </span><span class="js-precio">$600</span></small>
+
+    <div class="fan">
+      <div class="shot s1"><img src="assets/coach.jpg" alt="Folleto Evolución: conoce a tu coach, Monica Villalba" loading="lazy"></div>
+      <div class="shot s2"><img src="assets/workbook.jpg" alt="Portada del workbook Evolución" loading="lazy"></div>
+      <div class="shot s3"><img src="assets/incluye.jpg" alt="Folleto Evolución: lo que incluye la experiencia" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- HISTORIA -->
+<section class="story">
+  <div class="wrap story-grid">
+    <blockquote lang="es">“Sé que puedo más… pero no sé por dónde empezar.”</blockquote>
+    <blockquote lang="en">“I know I can do more… but I don't know where to start.”</blockquote>
+    <div>
+      <p lang="es">Lo escucho todo el tiempo. Mujeres capaces, trabajadoras y generosas que viven para todos, menos para ellas, y que tienen una idea guardada desde hace años. No les falta capacidad: les falta claridad, confianza y alguien que camine a su lado.</p>
+      <p lang="en">I hear it all the time. Capable, hardworking, generous women who live for everyone but themselves, with an idea they've kept to themselves for years. They don't lack ability: they lack clarity, confidence and someone to walk beside them.</p>
+      <p lang="es"><strong>Por eso creé Evolución.</strong></p>
+      <p lang="en"><strong>That is why I created Evolución.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- PARA QUIÉN -->
+<section>
+  <div class="wrap">
+    <div class="kicker"><span lang="es">¿Es para ti?</span><span lang="en">Is it for you?</span></div>
+    <h2 lang="es">Dos caminos, <em>una misma evolución</em></h2>
+    <h2 lang="en">Two paths, <em>one evolution</em></h2>
+    <p class="sub" lang="es">Eliges tu ruta en la primera sesión, y puede cambiar en el camino.</p>
+    <p class="sub" lang="en">You choose your path in the first session, and it can change along the way.</p>
+    <div class="routes">
+      <div class="route">
+        <h3><span lang="es">Ruta personal</span><span lang="en">Personal path</span></h3>
+        <p lang="es">Claridad, confianza y propósito para una nueva etapa de tu vida. No necesitas un negocio: el proyecto eres tú.</p>
+        <p lang="en">Clarity, confidence and purpose for a new stage of your life. You don't need a business: the project is you.</p>
+      </div>
+      <div class="route">
+        <h3><span lang="es">Ruta de proyecto o negocio</span><span lang="en">Project or business path</span></h3>
+        <p lang="es">Todo lo anterior, más una estrategia concreta y un plan de 30 días para crear o hacer crecer tu proyecto.</p>
+        <p lang="en">All of the above, plus a concrete strategy and a 30-day plan to start or grow your project.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LAS 8 SEMANAS -->
+<section class="path" id="camino">
+  <div class="wrap">
+    <div class="kicker"><span lang="es">El camino</span><span lang="en">The journey</span></div>
+    <h2 lang="es">Tres fases, <em>una sesión por semana</em></h2>
+    <h2 lang="en">Three phases, <em>one session a week</em></h2>
+    <p class="sub" lang="es">Cada semana deja algo escrito en tu workbook. Las sesiones 1, 5 y 8 son en persona en El Jardín; si vives lejos, todas pueden ser virtuales.</p>
+    <p class="sub" lang="en">Each week leaves something written in your workbook. Sessions 1, 5 and 8 meet in person in the garden; if you live far away, all of them can be online.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="n">1</div>
+        <h3><span lang="es">Claridad</span><span lang="en">Clarity</span></h3>
+        <p class="ph"><span lang="es">Semanas 1 a 3 · Enfoque</span><span lang="en">Weeks 1 to 3 · Focus</span></p>
+        <ul class="weeks">
+          <li><span class="wk"><span lang="es">Semana 1</span><span lang="en">Week 1</span></span><strong><span lang="es">Mi punto de partida</span><span lang="en">My starting point</span></strong><span class="d"><span lang="es">Rueda de la Vida y tu plan inicial personalizado.</span><span lang="en">Wheel of Life and your personalized starting plan.</span></span><span class="garden"><span lang="es">En El Jardín</span><span lang="en">In the garden</span></span></li>
+          <li><span class="wk"><span lang="es">Semana 2</span><span lang="en">Week 2</span></span><strong><span lang="es">Mi visión</span><span lang="en">My vision</span></strong><span class="d"><span lang="es">Tus 5 valores y la vida que quieres vivir en un año.</span><span lang="en">Your 5 values and the life you want a year from now.</span></span></li>
+          <li><span class="wk"><span lang="es">Semana 3</span><span lang="en">Week 3</span></span><strong><span lang="es">Mis objetivos</span><span lang="en">My goals</span></strong><span class="d"><span lang="es">Dos metas claras de 90 días, con fecha.</span><span lang="en">Two clear 90-day goals, with dates.</span></span></li>
+        </ul>
+      </div>
+      <div class="step">
+        <div class="n">2</div>
+        <h3><span lang="es">Confianza</span><span lang="en">Confidence</span></h3>
+        <p class="ph"><span lang="es">Semanas 4 a 6 · Acción</span><span lang="en">Weeks 4 to 6 · Action</span></p>
+        <ul class="weeks">
+          <li><span class="wk"><span lang="es">Semana 4</span><span lang="en">Week 4</span></span><strong><span lang="es">Mi mentalidad</span><span lang="en">My mindset</span></strong><span class="d"><span lang="es">De las creencias que te frenan a las que te impulsan.</span><span lang="en">From beliefs that hold you back to beliefs that move you.</span></span></li>
+          <li><span class="wk"><span lang="es">Semana 5</span><span lang="en">Week 5</span></span><strong><span lang="es">Estrategia para mi proyecto</span><span lang="en">Strategy for my project</span></strong><span class="d"><span lang="es">El mapa de tu proyecto y un plan de 30 días.</span><span lang="en">Your project map and a 30-day plan.</span></span><span class="garden"><span lang="es">En El Jardín</span><span lang="en">In the garden</span></span></li>
+          <li><span class="wk"><span lang="es">Semana 6</span><span lang="en">Week 6</span></span><strong><span lang="es">Liderazgo y comunicación</span><span lang="en">Leadership and communication</span></strong><span class="d"><span lang="es">Decir que no sin culpa y presentarte con seguridad.</span><span lang="en">Saying no without guilt and introducing yourself with confidence.</span></span></li>
+        </ul>
+      </div>
+      <div class="step">
+        <div class="n">3</div>
+        <h3><span lang="es">Propósito</span><span lang="en">Purpose</span></h3>
+        <p class="ph"><span lang="es">Semanas 7 y 8 · Impacto</span><span lang="en">Weeks 7 and 8 · Impact</span></p>
+        <ul class="weeks">
+          <li><span class="wk"><span lang="es">Semana 7</span><span lang="en">Week 7</span></span><strong><span lang="es">Hábitos y energía</span><span lang="en">Habits and energy</span></strong><span class="d"><span lang="es">Una rutina realista para tus días buenos y difíciles.</span><span lang="en">A realistic routine for your good days and hard days.</span></span></li>
+          <li><span class="wk"><span lang="es">Semana 8</span><span lang="en">Week 8</span></span><strong><span lang="es">Celebro y sigo creciendo</span><span lang="en">I celebrate and keep growing</span></strong><span class="d"><span lang="es">Tu declaración de propósito, tu plan de 90 días y un ritual de cierre.</span><span lang="en">Your purpose statement, your 90-day plan and a closing ritual.</span></span><span class="garden"><span lang="es">En El Jardín</span><span lang="en">In the garden</span></span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INCLUYE -->
+<section>
+  <div class="wrap">
+    <div class="kicker"><span lang="es">Tu experiencia Evolución incluye</span><span lang="en">Your Evolución experience includes</span></div>
+    <h2 lang="es">Todo lo que necesitas <em>para no caminar sola</em></h2>
+    <h2 lang="en">Everything you need <em>so you don't walk alone</em></h2>
+    <p class="sub" lang="es">Cada pieza tiene su momento en el programa y deja algo concreto en tus manos.</p>
+    <p class="sub" lang="en">Each piece has its moment in the program and leaves something concrete in your hands.</p>
+    <ul class="inside">
+      <li><span class="ic">8</span><div><strong><span lang="es">8 sesiones de 60 minutos</span><span lang="en">8 sessions of 60 minutes</span></strong><em><span lang="es">Mentoría y acompañamiento personalizado.</span><span lang="en">Personalized mentoring and support.</span></em></div></li>
+      <li><span class="ic">✿</span><div><strong><span lang="es">Modalidad híbrida</span><span lang="en">Hybrid format</span></strong><em><span lang="es">Sesiones virtuales y encuentros en el jardín de Mindful Wellness.</span><span lang="en">Online sessions and gatherings in the Mindful Wellness garden.</span></em></div></li>
+      <li><span class="ic">✓</span><div><strong><span lang="es">Plan inicial personalizado</span><span lang="en">Personalized starting plan</span></strong><em><span lang="es">Dónde estás, a dónde vas y qué vas a trabajar.</span><span lang="en">Where you are, where you're going and what you'll work on.</span></em></div></li>
+      <li><span class="ic">✓</span><div><strong><span lang="es">Objetivos y visión</span><span lang="en">Goals and vision</span></strong><em><span lang="es">Tu visión a un año y dos metas de 90 días.</span><span lang="en">Your one-year vision and two 90-day goals.</span></em></div></li>
+      <li><span class="ic">✓</span><div><strong><span lang="es">Estrategia para tus proyectos</span><span lang="en">Strategy for your projects</span></strong><em><span lang="es">Un mapa y un plan de 30 días con fechas.</span><span lang="en">A map and a 30-day plan with dates.</span></em></div></li>
+      <li><span class="ic">✓</span><div><strong><span lang="es">Liderazgo y comunicación</span><span lang="en">Leadership and communication</span></strong><em><span lang="es">Límites, tu voz y tu presentación de 30 segundos.</span><span lang="en">Boundaries, your voice and your 30-second introduction.</span></em></div></li>
+      <li><span class="ic">♡</span><div><strong><span lang="es">Trabajo profundo de mentalidad</span><span lang="en">Deep mindset work</span></strong><em><span lang="es">Crecimiento personal desde adentro.</span><span lang="en">Personal growth from the inside out.</span></em></div></li>
+      <li><span class="ic">✓</span><div><strong><span lang="es">Seguimiento semanal</span><span lang="en">Weekly follow-up</span></strong><em><span lang="es">Un mensaje a mitad de semana para no soltar.</span><span lang="en">A mid-week message so you don't let go.</span></em></div></li>
+      <li><span class="ic">✎</span><div><strong><span lang="es">Tu workbook Evolución</span><span lang="en">Your Evolución workbook</span></strong><em><span lang="es">Ejercicios, reflexiones y el registro de tu camino.</span><span lang="en">Exercises, reflections and a record of your journey.</span></em></div></li>
+      <li><span class="ic">∞</span><div><strong><span lang="es">Plan para seguir creciendo</span><span lang="en">A plan to keep growing</span></strong><em><span lang="es">Tu plan de 90 días al terminar el programa.</span><span lang="en">Your 90-day plan when the program ends.</span></em></div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- RESULTADOS -->
+<section class="results">
+  <div class="wrap">
+    <div class="kicker"><span lang="es">Al finalizar este programa</span><span lang="en">When you finish this program</span></div>
+    <h2 lang="es">Lo que <em>habrás desarrollado</em></h2>
+    <h2 lang="en">What you <em>will have developed</em></h2>
+    <ul class="inside">
+      <li><span class="ic">✓</span><div><strong><span lang="es">Mayor confianza en ti</span><span lang="en">More confidence in yourself</span></strong><em><span lang="es">Te atreves a pedir, a decir que no y a mostrarte.</span><span lang="en">You dare to ask, to say no and to show up.</span></em></div></li>
+      <li><span class="ic">✓</span><div><strong><span lang="es">Claridad para tomar decisiones</span><span lang="en">Clarity to make decisions</span></strong><em><span lang="es">Decides desde tus valores, no desde la culpa o el miedo.</span><span lang="en">You decide from your values, not from guilt or fear.</span></em></div></li>
+      <li><span class="ic">✓</span><div><strong><span lang="es">Liderazgo personal</span><span lang="en">Personal leadership</span></strong><em><span lang="es">Hablas con seguridad y pones límites sin pedir perdón.</span><span lang="en">You speak with confidence and set boundaries without apologizing.</span></em></div></li>
+      <li><span class="ic">✓</span><div><strong><span lang="es">Herramientas para construir proyectos</span><span lang="en">Tools to build projects</span></strong><em><span lang="es">Sabes convertir una idea en pasos con fecha.</span><span lang="en">You know how to turn an idea into dated steps.</span></em></div></li>
+      <li><span class="ic">✓</span><div><strong><span lang="es">Una visión renovada de tu propósito</span><span lang="en">A renewed sense of purpose</span></strong><em><span lang="es">Sabes para qué haces lo que haces.</span><span lang="en">You know why you do what you do.</span></em></div></li>
+      <li><span class="ic">✓</span><div><strong><span lang="es">Un plan para continuar creciendo</span><span lang="en">A plan to keep growing</span></strong><em><span lang="es">Tu plan de 90 días y tus rituales para seguir.</span><span lang="en">Your 90-day plan and your rituals to continue.</span></em></div></li>
+    </ul>
+    <p class="res-note" lang="es">Tu Rueda de la Vida se hace en la semana 1 y se repite en la semana 8. Ver las dos lado a lado te muestra, con tus propios números, cuánto avanzaste.</p>
+    <p class="res-note" lang="en">You fill in your Wheel of Life in week 1 and again in week 8. Seeing both side by side shows you, in your own numbers, how far you've come.</p>
+  </div>
+</section>
+
+<!-- INSCRIPCIÓN -->
+<section class="order" id="empezar">
+  <div class="wrap">
+    <div class="kicker"><span lang="es">Tu evolución empieza con una decisión</span><span lang="en">Your evolution starts with a decision</span></div>
+    <h2 lang="es">Date la oportunidad <em>de evolucionar</em></h2>
+    <h2 lang="en">Give yourself the chance <em>to evolve</em></h2>
+    <p class="sub" lang="es">Primero nos conocemos en una llamada gratuita. Si las dos sentimos que es tu momento, reservas tu lugar.</p>
+    <p class="sub" lang="en">First we meet on a free call. If we both feel it's your time, you reserve your place.</p>
+
+    <div class="plans">
+      <div class="plan">
+        <span class="tag"><span lang="es">Paso 1 · Gratis</span><span lang="en">Step 1 · Free</span></span>
+        <h3><span lang="es">Llamada de descubrimiento</span><span lang="en">Discovery call</span></h3>
+        <p class="desc"><span lang="es">20 minutos para conocernos y ver si Evolución es para ti. Te escribo por WhatsApp para elegir el día.</span><span lang="en">20 minutes to meet and see if Evolución is right for you. I'll message you on WhatsApp to pick a day.</span></p>
+        <form id="form-llamada" autocomplete="on">
+          <div class="row2">
+            <div class="field"><label for="ll-nombre"><span lang="es">Tu nombre</span><span lang="en">Your name</span></label><input id="ll-nombre" name="nombre" required autocomplete="name"></div>
+            <div class="field"><label for="ll-tel"><span lang="es">Tu WhatsApp</span><span lang="en">Your WhatsApp</span></label><input id="ll-tel" name="telefono" type="tel" required autocomplete="tel" inputmode="tel"></div>
+          </div>
+          <div class="field"><label><span lang="es">¿Qué te representa hoy?</span><span lang="en">What describes you today?</span></label>
+            <div class="seg" id="seg-ruta">
+              <button type="button" class="on" data-v="personal"><span lang="es">Crecer en lo personal</span><span lang="en">Personal growth</span></button>
+              <button type="button" data-v="proyecto"><span lang="es">Tengo un proyecto</span><span lang="en">I have a project</span></button>
+            </div>
+          </div>
+          <div class="field"><label for="ll-cambio"><span lang="es">¿Qué te gustaría que cambiara en 8 semanas?</span><span lang="en">What would you like to change in 8 weeks?</span></label><textarea id="ll-cambio" name="cambio"></textarea></div>
+          <div class="field"><label for="ll-horario"><span lang="es">¿Cuándo te queda mejor?</span><span lang="en">When works best for you?</span></label>
+            <select id="ll-horario" name="horario">
+              <option value="entre semana en la mañana">Entre semana, mañana · Weekday morning</option>
+              <option value="entre semana en la tarde o noche">Entre semana, tarde o noche · Weekday evening</option>
+              <option value="sábado">Sábado · Saturday</option>
+            </select>
+          </div>
+          <button class="pay wa" type="submit"><span lang="es">Agendar por WhatsApp</span><span lang="en">Book on WhatsApp</span></button>
+          <p class="note"><span lang="es">Se abre un chat con Monica (201-679-9969) con tu mensaje ya escrito. Solo toca enviar.</span><span lang="en">A chat with Monica (201-679-9969) opens with your message ready. Just tap send.</span></p>
+        </form>
+      </div>
+
+      <div class="plan best">
+        <span class="tag"><span lang="es">Programa completo</span><span lang="en">Full program</span></span>
+        <h3>Evolución</h3>
+        <p class="desc"><span lang="es">8 semanas de mentoría individual.</span><span lang="en">8 weeks of one-on-one mentoring.</span></p>
+        <div class="price"><span class="now js-precio">$600</span><span class="was"><span lang="es">equivale a </span><span lang="en">that's </span><span class="js-por-sesion">$75</span><span lang="es"> por sesión</span><span lang="en"> per session</span></span></div>
+        <p class="was" id="cuotas-line" hidden></p>
+        <ul class="list">
+          <li><span lang="es">8 sesiones de 60 minutos</span><span lang="en">8 sessions of 60 minutes</span></li>
+          <li><span lang="es">3 encuentros en El Jardín</span><span lang="en">3 gatherings in the garden</span></li>
+          <li><span lang="es">Plan inicial personalizado</span><span lang="en">Personalized starting plan</span></li>
+          <li><span lang="es">Workbook Evolución</span><span lang="en">Evolución workbook</span></li>
+          <li><span lang="es">Seguimiento semanal por WhatsApp</span><span lang="en">Weekly WhatsApp follow-up</span></li>
+          <li><span lang="es">Plan de 90 días para seguir creciendo</span><span lang="en">90-day plan to keep growing</span></li>
+        </ul>
+        <div class="field" id="plan-field" hidden><label><span lang="es">¿Cómo quieres pagar?</span><span lang="en">How would you like to pay?</span></label>
+          <div class="seg" id="seg-plan">
+            <button type="button" class="on" data-v="completo"><span lang="es">Pago completo</span><span lang="en">Pay in full</span></button>
+            <button type="button" data-v="cuotas" id="btn-cuotas">Cuotas</button>
+          </div>
+        </div>
+        <a class="pay" id="btn-tarjeta" href="#" target="_blank" rel="noopener"><span lang="es">Inscribirme · pagar con tarjeta</span><span lang="en">Enroll · pay by card</span></a>
+        <a class="pay alt" href="#zelle"><span lang="es">Prefiero pagar por Zelle</span><span lang="en">I'd rather pay by Zelle</span></a>
+        <p class="note" id="tarjeta-note"></p>
+      </div>
+    </div>
+
+    <div class="zelle" id="zelle">
+      <img src="assets/zelle-qr.jpg" alt="Código QR de Zelle · Mindful Wellness &amp; Coaching LLC">
+      <div>
+        <h3><span lang="es">Pagar por Zelle</span><span lang="en">Pay with Zelle</span></h3>
+        <p><span lang="es">Escanea el código o envía </span><span lang="en">Scan the code or send </span><b class="js-monto">$600</b><span lang="es"> a </span><span lang="en"> to </span><strong class="js-zelle-nombre">Mindful Wellness &amp; Coaching LLC</strong><span lang="es"> al </span><span lang="en"> at </span><strong class="js-zelle-num">201-679-9969</strong>.</p>
+        <div class="zcode"><span lang="es">En la nota del Zelle escribe</span><span lang="en">In the Zelle memo write</span> <b id="z-code">EVOLUCION</b> <button type="button" id="z-copy"><span lang="es">Copiar</span><span lang="en">Copy</span></button></div>
+        <form id="zelle-form" class="zform" autocomplete="on">
+          <div class="row2">
+            <div><label for="z-nombre"><span lang="es">Tu nombre</span><span lang="en">Your name</span></label><input id="z-nombre" name="nombre" required autocomplete="name"></div>
+            <div><label for="z-tel"><span lang="es">Tu WhatsApp</span><span lang="en">Your WhatsApp</span></label><input id="z-tel" name="telefono" type="tel" required autocomplete="tel" inputmode="tel"></div>
+          </div>
+          <label for="z-correo"><span lang="es">Tu correo electrónico</span><span lang="en">Your email</span></label><input id="z-correo" name="correo" type="email" required autocomplete="email" inputmode="email">
+          <button class="pay wa" type="submit"><span lang="es">Ya pagué · Confirmar por WhatsApp</span><span lang="en">I paid · Confirm on WhatsApp</span></button>
+          <p class="note"><span lang="es">Se abre WhatsApp con tu confirmación ya escrita. Adjunta la foto del comprobante y envía.</span><span lang="en">WhatsApp opens with your confirmation ready. Attach your receipt photo and send.</span></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COACH -->
+<section class="about">
+  <div class="wrap about-grid">
+    <img src="assets/monica.jpg" alt="Monica Villalba">
+    <div>
+      <div class="kicker"><span lang="es">Conoce a tu coach</span><span lang="en">Meet your coach</span></div>
+      <h3>Monica Villalba</h3>
+      <div class="role"><span lang="es">Coach de Salud y Bienestar certificada en EE. UU. · Mindful Wellness NYC</span><span lang="en">U.S.-Certified Health &amp; Wellness Coach · Mindful Wellness NYC</span></div>
+      <p lang="es">Psicóloga y especialista en desarrollo humano, liderazgo y hábitos de transformación. Más de 25 años acompañando a personas a descubrir su potencial y construir la vida que desean.</p>
+      <p lang="en">Psychologist and specialist in human development, leadership and transformational habits. More than 25 years helping people discover their potential and build the life they want.</p>
+      <blockquote lang="es">“Mi propósito es ayudarte a creer en ti, descubrir tu camino y avanzar con confianza.”</blockquote>
+      <blockquote lang="en">“My purpose is to help you believe in yourself, discover your path and move forward with confidence.”</blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- PREGUNTAS -->
+<section class="faq">
+  <div class="wrap">
+    <div class="kicker"><span lang="es">Preguntas frecuentes</span><span lang="en">FAQ</span></div>
+    <h2 lang="es">Lo que <em>más me preguntan</em></h2>
+    <h2 lang="en">What people <em>ask me most</em></h2>
+    <details><summary><span lang="es">¿Necesito tener un negocio?</span><span lang="en">Do I need to have a business?</span></summary><p lang="es">No. Si tienes un proyecto o un negocio, trabajamos una estrategia para él. Si no, el proyecto eres tú y tu nueva etapa.</p><p lang="en">No. If you have a project or business, we build a strategy for it. If not, the project is you and your new chapter.</p></details>
+    <details><summary><span lang="es">¿Y si vivo lejos de New Jersey?</span><span lang="en">What if I live far from New Jersey?</span></summary><p lang="es">Todas las sesiones pueden ser virtuales. Los encuentros en El Jardín son para quien puede venir a Wallington, NJ.</p><p lang="en">All sessions can be online. The garden gatherings are for those who can come to Wallington, NJ.</p></details>
+    <details><summary><span lang="es">¿Qué pasa si no puedo asistir a una sesión?</span><span lang="en">What if I miss a session?</span></summary><p lang="es">La reprogramamos si me avisas con 24 horas. El programa se completa en un máximo de 10 semanas.</p><p lang="en">We reschedule it if you let me know 24 hours ahead. The program is completed within 10 weeks at most.</p></details>
+    <details><summary><span lang="es">¿Es terapia?</span><span lang="en">Is this therapy?</span></summary><p lang="es">No. Evolución es mentoría y coaching: miramos hacia adelante y construimos. Si en el camino aparece algo que necesita atención terapéutica, te ayudo a encontrar el apoyo adecuado.</p><p lang="en">No. Evolución is mentoring and coaching: we look ahead and build. If something comes up that needs therapeutic care, I'll help you find the right support.</p></details>
+    <details><summary><span lang="es">¿Cuánto tiempo necesito entre sesiones?</span><span lang="en">How much time do I need between sessions?</span></summary><p lang="es">Entre 20 y 30 minutos a la semana con tu workbook y tus compromisos.</p><p lang="en">20 to 30 minutes a week with your workbook and your commitments.</p></details>
+    <details><summary><span lang="es">¿Puedo hacerlo en inglés?</span><span lang="en">Can I do it in English?</span></summary><p lang="es">Sí. Las sesiones pueden ser en español o en inglés.</p><p lang="en">Yes. Sessions can be in Spanish or English.</p></details>
+  </div>
+</section>
+
+<footer>
+  <div class="motto"><span lang="es">Crece. Lidera. Confía. Transforma.<br>Tu mejor versión es tu mayor legado.</span><span lang="en">Grow. Lead. Trust. Transform.<br>Your best self is your greatest legacy.</span></div>
+  <div class="links">
+    <a href="https://instagram.com/mindfulwellnessnyc" target="_blank" rel="noopener">@mindfulwellnessnyc</a>
+    <a href="https://mindfulwellness.nyc/" target="_blank" rel="noopener">mindfulwellness.nyc</a>
+    <a id="wa-footer" href="#" target="_blank" rel="noopener">WhatsApp 201-679-9969</a>
+  </div>
+  <div>© <span id="yr"></span> Mindful Wellness &amp; Coaching LLC</div>
+</footer>
+
+<div class="buybar" id="buybar">
+  <div><b>Evolución · <span class="js-precio">$600</span></b><span><span lang="es">8 semanas · mentoría individual</span><span lang="en">8 weeks · one-on-one</span></span></div>
+  <a class="btn-mini" href="#empezar"><span lang="es">Llamada gratis</span><span lang="en">Free call</span></a>
+</div>
+
+<script src="config.js"></script>
+<script>
+const C = window.CONFIG || {};
+const $ = s => document.querySelector(s);
+const $$ = s => Array.from(document.querySelectorAll(s));
+const money = n => "$" + Number(n).toLocaleString("en-US");
+const wa = msg => "https://wa.me/" + (C.whatsapp || "12016799969") + "?text=" + encodeURIComponent(msg);
+const log = data => { if (!C.sheetUrl) return; try { navigator.sendBeacon(C.sheetUrl, new Blob([JSON.stringify(Object.assign({ programa: "evolucion" }, data))], { type: "text/plain" })); } catch (_) {} };
+let lang = "es";
+
+// precios desde config.js
+const precio = C.precio || 600;
+const cu = C.cuotas || {};
+$$(".js-precio").forEach(el => el.textContent = money(precio));
+$$(".js-por-sesion").forEach(el => el.textContent = money(Math.round(precio / 8)));
+if (C.zelle) { $$(".js-zelle-nombre").forEach(e => e.textContent = C.zelle.nombre); $$(".js-zelle-num").forEach(e => e.textContent = C.zelle.numero); }
+if (cu.activo) {
+  $("#plan-field").hidden = false;
+  $("#btn-cuotas").textContent = `${cu.numero} × ${money(cu.monto)}`;
+  $("#cuotas-line").hidden = false;
+  $("#cuotas-line").textContent = `o ${cu.numero} cuotas de ${money(cu.monto)} · or ${cu.numero} payments of ${money(cu.monto)}`;
+}
+
+// botones de selección
+function seg(id, onChange) {
+  $$(`#${id} button`).forEach(b => b.addEventListener("click", () => {
+    $$(`#${id} button`).forEach(x => x.classList.toggle("on", x === b)); if (onChange) onChange();
+  }));
+}
+const segVal = id => { const b = $(`#${id} button.on`); return b ? b.dataset.v : ""; };
+const plan = () => (cu.activo && segVal("seg-plan") === "cuotas") ? "cuotas" : "completo";
+const planTxt = () => plan() === "cuotas" ? `en ${cu.numero} cuotas de ${money(cu.monto)}` : `pago completo de ${money(precio)}`;
+function refreshPay() {
+  const link = (C.stripe || {})[plan()];
+  const b = $("#btn-tarjeta");
+  if (link) {
+    b.href = link;
+    $("#tarjeta-note").textContent = lang === "es" ? "Pago seguro con Stripe. Al terminar te llevamos a WhatsApp." : "Secure payment with Stripe. Afterwards we take you to WhatsApp.";
+  } else {
+    b.href = wa(`Hola Monica 💜 Quiero inscribirme en Evolución (${planTxt()}) y pagar con tarjeta.`);
+    $("#tarjeta-note").textContent = lang === "es" ? "Te escribo por WhatsApp con tu enlace de pago seguro." : "I'll message you on WhatsApp with your secure payment link.";
+  }
+  $$(".js-monto").forEach(e => e.textContent = plan() === "cuotas" ? money(cu.monto) : money(precio));
+}
+seg("seg-ruta"); seg("seg-plan", refreshPay);
+
+// idioma
+function setLang(l) {
+  lang = l; document.documentElement.dataset.lang = l; document.documentElement.lang = l;
+  $$("[data-set-lang]").forEach(b => b.classList.toggle("on", b.dataset.setLang === l));
+  refreshPay();
+}
+$$("[data-set-lang]").forEach(b => b.addEventListener("click", () => setLang(b.dataset.setLang)));
+
+$("#btn-tarjeta").addEventListener("click", () => log({ tipo: "tarjeta_inicio", plan: plan() }));
+$("#wa-footer").href = wa("Hola Monica 💜 Tengo una pregunta sobre Evolución:");
+
+// llamada gratuita
+$("#form-llamada").addEventListener("submit", e => {
+  e.preventDefault();
+  const d = Object.fromEntries(new FormData(e.target));
+  const ruta = segVal("seg-ruta") === "proyecto" ? "tengo un proyecto o negocio" : "quiero crecer en lo personal";
+  log(Object.assign({ tipo: "llamada", ruta }, d));
+  const msg = [`Hola Monica 💜 Me interesa Evolución y quiero agendar mi llamada gratuita.`,
+    `• Nombre: ${d.nombre}`, `• Mi WhatsApp: ${d.telefono}`, `• Hoy: ${ruta}`,
+    d.cambio ? `• Lo que quiero cambiar: ${d.cambio}` : "", `• Mejor horario: ${d.horario}`].filter(Boolean).join("\n");
+  window.location.href = wa(msg);
+});
+
+// Zelle
+const ZID = "EVO-" + Date.now().toString(36).toUpperCase().slice(-5);
+$("#z-code").textContent = ZID;
+$("#z-copy").addEventListener("click", () => {
+  const done = () => { $("#z-copy").textContent = lang === "es" ? "¡Copiado!" : "Copied!"; };
+  try { navigator.clipboard.writeText(ZID).then(done, () => window.getSelection().selectAllChildren($("#z-code"))); }
+  catch (_) { window.getSelection().selectAllChildren($("#z-code")); }
+});
+$("#zelle-form").addEventListener("submit", e => {
+  e.preventDefault();
+  const d = Object.fromEntries(new FormData(e.target));
+  log(Object.assign({ tipo: "zelle", plan: plan(), codigo: ZID }, d));
+  const msg = [`Hola Monica 💜 Acabo de pagar por Zelle mi inscripción en Evolución (${planTxt()}). Código ${ZID}.`,
+    `• Nombre: ${d.nombre}`, `• WhatsApp: ${d.telefono}`, `• Correo: ${d.correo}`, `Te adjunto el comprobante 👇`].join("\n");
+  window.location.href = wa(msg);
+});
+$("#yr").textContent = new Date().getFullYear();
+
+// barra inferior en celulares
+const bar = $("#buybar"), seen = { hero: true, order: false };
+const upd = () => bar.classList.toggle("show", !seen.hero && !seen.order);
+if ("IntersectionObserver" in window) {
+  new IntersectionObserver(es => es.forEach(e => { seen.hero = e.isIntersecting; upd(); })).observe($(".hero"));
+  new IntersectionObserver(es => es.forEach(e => { seen.order = e.isIntersecting; upd(); })).observe($("#empezar"));
+}
+
+// pétalos, como en la cajita
+(function(){
+  const c = document.getElementById("petals"); if (!c || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const x = c.getContext("2d"); let W, H; const P = [];
+  const cols = ["#C9A0D6","#E7D3A6","#B892CC","#F7B9A6","#A9C9B2"];
+  const dpr = devicePixelRatio || 1;
+  function size(){ W = c.width = c.offsetWidth * dpr; H = c.height = c.offsetHeight * dpr; }
+  size(); addEventListener("resize", size);
+  const n = r => ({ x: Math.random() * W, y: r ? Math.random() * H : -20, s: (6 + Math.random() * 9) * dpr, v: (.35 + Math.random() * .7) * dpr,
+    a: Math.random() * 6.28, w: .01 + Math.random() * .02, c: cols[Math.floor(Math.random() * cols.length)], o: .45 + Math.random() * .4 });
+  for (let i = 0; i < 26; i++) P.push(n(true));
+  (function f(){ x.clearRect(0, 0, W, H); P.forEach((p, k) => { p.y += p.v; p.a += p.w; p.x += Math.sin(p.a) * .6 * dpr;
+    x.save(); x.translate(p.x, p.y); x.rotate(p.a); x.globalAlpha = p.o; x.fillStyle = p.c; x.beginPath();
+    x.ellipse(0, 0, p.s, p.s * .45, 0, 0, 6.28); x.fill(); x.restore(); if (p.y > H + 20) P[k] = n(false); }); requestAnimationFrame(f); })();
+})();
+
+setLang(new URLSearchParams(location.search).get("lang") === "en" ? "en" : "es");
+</script>
+</body>
+</html>

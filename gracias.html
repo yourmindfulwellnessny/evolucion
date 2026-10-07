@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>¡Bienvenida a Evolución! · Mindful Wellness</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,500&family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--wine:#4E1A38;--plum:#2A0D21;--cream:#FBF6EF;--gold:#C9A45C;--gold-soft:#E7D3A6;color-scheme:light}
+*{box-sizing:border-box;margin:0;padding:0}
+body{min-height:100vh;display:grid;place-items:center;padding:24px 16px;font-family:"Nunito Sans",system-ui,sans-serif;color:var(--cream);line-height:1.55;
+  background:radial-gradient(120% 90% at 50% 10%,#6A2A57 0%,#4A1B3D 50%,var(--plum) 100%)}
+.box{max-width:460px;width:100%;text-align:center;border:1px solid rgba(201,164,92,.5);border-radius:24px;padding:34px 24px;background:rgba(255,255,255,.04)}
+.logo{width:120px;margin:0 auto 20px;background:var(--cream);border-radius:16px;padding:10px 12px}
+.cover{width:150px;margin:0 auto 22px;border-radius:10px;border:1px solid rgba(201,164,92,.7);box-shadow:0 16px 36px rgba(0,0,0,.45)}
+.label{font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--gold-soft)}
+h1{font-family:"Cormorant Garamond",Georgia,serif;font-size:2.4rem;line-height:1.05;margin:8px 0 10px}
+h1 em{color:var(--gold-soft);font-weight:500}
+p{color:#EADFE6;margin-bottom:10px}
+.ref{display:inline-block;margin:6px 0 18px;padding:6px 14px;border-radius:99px;border:1px solid rgba(201,164,92,.6);color:var(--gold-soft);font-weight:700;letter-spacing:.08em}
+.wa{display:block;background:#25D366;color:#073B1E;font-weight:700;text-decoration:none;padding:16px;border-radius:14px;font-size:1.05rem}
+.script{font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;color:var(--gold-soft);font-size:1.4rem;margin-top:18px}
+small{display:block;margin-top:12px;color:#CDBCC6}
+</style>
+</head>
+<body>
+<main class="box">
+  <img class="logo" src="assets/logo.png" alt="Mindful Wellness &amp; Coaching">
+  <img class="cover" src="assets/workbook.jpg" alt="Workbook Evolución">
+  <span class="label">Pago recibido</span>
+  <h1>¡Bienvenida a <em>Evolución!</em></h1>
+  <p>Gracias por darte esta oportunidad. Te llegará el recibo a tu correo.</p>
+  <div class="ref" id="ref">Inscripción recibida</div>
+  <a class="wa" id="wa" href="#">Confirmar y agendar mi primera sesión</a>
+  <small id="count">Te llevamos a WhatsApp en <b id="n">8</b> s…</small>
+  <p class="script">El crecimiento comienza con una decisión</p>
+</main>
+<script src="config.js"></script>
+<script>
+const sid = new URLSearchParams(location.search).get("session_id") || "";
+const ref = sid ? sid.slice(-8).toUpperCase() : "";
+if (ref) document.getElementById("ref").textContent = "Inscripción #" + ref;
+if (CONFIG.sheetUrl && sid) { try { fetch(CONFIG.sheetUrl + "?action=sync&programa=evolucion&session_id=" + encodeURIComponent(sid), { mode: "no-cors", keepalive: true }).catch(() => {}); } catch (_) {} }
+const msg = `Hola Monica 💜 Acabo de pagar con tarjeta mi inscripción en Evolución.` + (ref ? ` Inscripción #${ref}.` : "") + `\nMi nombre es:\nQuiero agendar mi primera sesión.`;
+const url = "https://wa.me/" + CONFIG.whatsapp + "?text=" + encodeURIComponent(msg);
+document.getElementById("wa").href = url;
+let n = 8;
+const t = setInterval(() => {
+  n--; document.getElementById("n").textContent = n;
+  if (n <= 0) { clearInterval(t); document.getElementById("count").textContent = "¿No se abrió? Toca el botón verde."; location.href = url; }
+}, 1000);
+</script>
+</body>
+</html>
