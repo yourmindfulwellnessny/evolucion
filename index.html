@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Evolución · Mentoría 1:1 de 8 semanas · Mindful Wellness by Monica V.</title>
+<title>Evolución · Mentoría 1:1 de 8 semanas · Mindful Wellness</title>
 <meta name="description" content="Evolución: 8 semanas de mentoría 1:1 con Mónica Villalba para mujeres que quieren pasar de “sé que puedo más” a un plan claro, con confianza y propósito. Virtual y en El Jardín, Wallington NJ.">
 <meta property="og:title" content="Evolución · 8 semanas para convertirte en la mujer que ya sabes que puedes ser">
 <meta property="og:description" content="Mentoría estratégica y crecimiento personal 1:1 con Mónica Villalba. Empieza con una llamada gratuita.">
@@ -26,7 +26,7 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:hidden;overflow-x:clip}
-section,header.hero,.ribbon{overflow-x:clip}
+.ribbon{overflow-x:clip}
 body{background:var(--ivory);color:var(--ink);font-family:"Nunito Sans",system-ui,sans-serif;font-size:18px;line-height:1.7;overflow-x:hidden}
 img{max-width:100%;display:block}
 a{color:inherit}
@@ -63,7 +63,7 @@ h2 em,h1 em{font-family:var(--serif);font-style:italic;font-weight:500;letter-sp
 .nav{position:fixed;inset:0 0 auto;z-index:60;transition:background .35s,box-shadow .35s,padding .35s;padding:18px 0}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:18px;max-width:1280px}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
-.brand img{height:44px;width:auto}
+.brand img{height:48px;width:auto}
 .brand small{font:italic 500 1.02rem var(--serif);color:var(--gold2);border-left:1px solid rgba(255,255,255,.3);padding-left:12px;white-space:nowrap}
 .nav-links{display:flex;align-items:center;gap:28px}
 .nav-links a:not(.btn){color:#fff;text-decoration:none;font:700 .76rem "Nunito Sans";letter-spacing:.14em;text-transform:uppercase;opacity:.85}
@@ -74,7 +74,7 @@ h2 em,h1 em{font-family:var(--serif);font-style:italic;font-weight:500;letter-sp
 @media(max-width:420px){.nav .btn{padding:11px 14px;font-size:.68rem;letter-spacing:.06em}.brand img{height:36px}}
 
 /* ===== HERO ===== */
-.hero{min-height:100vh;min-height:100svh;display:flex;align-items:center;color:#fff;background:var(--night);overflow:hidden;isolation:isolate;padding:130px 0 70px}
+.hero{min-height:100vh;min-height:100svh;display:flex;align-items:center;color:#fff;background:var(--night);overflow:hidden;contain:paint;isolation:isolate;padding:130px 0 70px}
 .hero-photo{position:absolute;inset:0 0 0 auto;width:62%;z-index:-3;background:url(assets/jardin.jpg) center 30%/cover no-repeat;animation:slowzoom 22s ease-in-out infinite alternate}
 .hero-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--night) 0%,rgba(34,9,26,.86) 22%,rgba(34,9,26,.35) 60%,rgba(34,9,26,.15) 100%),linear-gradient(0deg,var(--night) 0%,transparent 35%)}
 @keyframes slowzoom{from{transform:scale(1)}to{transform:scale(1.08)}}
@@ -118,8 +118,8 @@ h2 em,h1 em{font-family:var(--serif);font-style:italic;font-weight:500;letter-sp
 /* ===== PARA QUIÉN ===== */
 .who{padding:120px 0 110px}
 .who-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:50px}
-.who-card{position:relative;min-height:520px;border-radius:28px;overflow:hidden;color:#fff;display:flex;align-items:flex-end;background:center/cover no-repeat;isolation:isolate}
-.who-card:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(34,9,26,.96) 0%,rgba(34,9,26,.72) 45%,rgba(34,9,26,.12) 100%);transition:background .4s}
+.who-card{position:relative;min-height:600px;border-radius:28px;overflow:hidden;color:#fff;display:flex;align-items:flex-end;background:center/cover no-repeat;isolation:isolate}
+.who-card:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(34,9,26,.97) 0%,rgba(34,9,26,.8) 40%,rgba(34,9,26,0) 68%);transition:background .4s}
 .who-card .in-c{padding:36px}
 .who-card .lbl{display:inline-block;font:800 .72rem "Nunito Sans";letter-spacing:.18em;text-transform:uppercase;background:rgba(255,255,255,.14);backdrop-filter:blur(6px);padding:8px 14px;border-radius:999px;margin-bottom:16px;color:var(--gold2)}
 .who-card h3{color:#fff;font-size:clamp(1.7rem,2.6vw,2.2rem);font-weight:700;margin-bottom:12px}
@@ -127,7 +127,8 @@ h2 em,h1 em{font-family:var(--serif);font-style:italic;font-weight:500;letter-sp
 .who-card ul{list-style:none;margin-top:16px;display:grid;gap:8px}
 .who-card li{padding-left:22px;position:relative;font-size:1rem;color:#fff}
 .who-card li:before{content:"";position:absolute;left:0;top:.62em;width:10px;height:2px;background:var(--mint)}
-@media(max-width:860px){.who-grid{grid-template-columns:1fr}.who-card{min-height:480px}.who-card .in-c{padding:28px}}
+@media(max-width:860px){.who-grid{grid-template-columns:1fr}.who-card{min-height:660px}.who-card .in-c{padding:28px}}
+@media(max-width:600px){.tile.big .wb{font-size:3.4rem}}
 
 /* ===== ¿TE IDENTIFICAS? ===== */
 .ident{background:var(--cream);padding:110px 0}
@@ -225,17 +226,17 @@ h2 em,h1 em{font-family:var(--serif);font-style:italic;font-weight:500;letter-sp
 .tile .no{position:absolute;top:22px;left:28px;font:800 .78rem var(--display);letter-spacing:.14em;color:var(--gold)}
 .tile h3{font-size:1.32rem;font-weight:700;margin-bottom:6px;letter-spacing:-.01em}
 .tile p{font-size:.98rem;color:var(--muted);line-height:1.55}
-.tile.big{grid-column:span 2;grid-row:span 2;background:var(--night) url(assets/workbook.jpg) right -30px top 30px/56% no-repeat;color:#fff}
-.tile.big:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--night) 42%,rgba(34,9,26,.2))}
+.tile.big{grid-column:span 2;grid-row:span 2;background:radial-gradient(circle at 85% 15%,rgba(117,211,117,.35),transparent 45%),radial-gradient(circle at 10% 100%,rgba(178,86,167,.55),transparent 55%),var(--night);color:#fff}
+.tile.big .wb{position:absolute;top:28px;right:28px;font:italic 500 5.5rem/1 var(--serif);color:rgba(231,211,166,.2)}
 .tile.big>*{position:relative}
-.tile.big h3{color:#fff;font-size:2rem;max-width:300px}.tile.big p{color:rgba(255,255,255,.82);max-width:300px}
+.tile.big h3{color:#fff;font-size:2.2rem;max-width:380px}.tile.big p{color:rgba(255,255,255,.85);max-width:400px;font-size:1.05rem}
 .tile.photo{grid-column:span 2;background:center 60%/cover no-repeat url(assets/eljardin.jpg);color:#fff}
 .tile.photo:before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(34,9,26,.95),rgba(34,9,26,.15) 75%)}
 .tile.photo>*{position:relative}.tile.photo h3{color:#fff}.tile.photo p{color:rgba(255,255,255,.85)}
 .tile.lav{background:var(--lav)}.tile.lav h3,.tile.lav p{color:#fff}.tile.lav .no{color:var(--gold2)}
 .tile.mint{background:#dff3df}.tile.mint .no{color:#2f8a35}
 @media(max-width:960px){.bento{grid-template-columns:1fr 1fr}.tile.big{grid-row:span 2}}
-@media(max-width:600px){.bento{grid-template-columns:1fr}.tile.big,.tile.photo{grid-column:auto}.tile.big{min-height:420px;background-size:62%;background-position:right -40px bottom -40px}.tile.big:before{background:linear-gradient(180deg,var(--night) 45%,rgba(34,9,26,.25))}.tile.big{justify-content:flex-start;padding-top:60px}}
+@media(max-width:600px){.bento{grid-template-columns:1fr}.tile.big,.tile.photo{grid-column:auto}.tile.big{min-height:300px}}
 
 /* ===== RESULTADOS ===== */
 .res{padding:120px 0}
@@ -250,24 +251,28 @@ h2 em,h1 em{font-family:var(--serif);font-style:italic;font-weight:500;letter-sp
 .wheel h3{color:#fff;font-size:1.5rem;margin-bottom:4px}
 .wheel>p{color:rgba(255,255,255,.75);font-size:.98rem}
 .wheel svg{width:100%;height:auto;margin-top:12px;overflow:visible;padding:0 6px}
-.wheel .lab{font:700 11px "Nunito Sans";fill:rgba(255,255,255,.8);letter-spacing:.06em;text-transform:uppercase}
-.wheel .p1{fill:rgba(231,211,166,.22);stroke:var(--gold2);stroke-width:2}
-.wheel .p8{fill:rgba(117,211,117,.28);stroke:var(--mint);stroke-width:2.5;transform-origin:200px 200px;transform:scale(.15);transition:transform 1.6s cubic-bezier(.2,.7,.2,1) .3s}
-.wheel.in .p8{transform:scale(1)}
+.wheel .lab{font:800 15px "Nunito Sans";fill:rgba(255,255,255,.8);letter-spacing:.06em;text-transform:uppercase}
+.wheel .seg{transition:d .9s cubic-bezier(.2,.7,.2,1)}
+.wh-tabs{display:inline-flex;margin-top:18px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:4px}
+.wh-tabs button{border:0;background:none;color:rgba(255,255,255,.8);font:800 .74rem "Nunito Sans";letter-spacing:.12em;text-transform:uppercase;padding:10px 18px;border-radius:999px;transition:all .3s}
+.wh-tabs button[aria-selected=true]{background:var(--gold2);color:var(--night)}
+.wh-tabs button[data-w="8"][aria-selected=true]{background:var(--mint)}
 .legend{display:flex;gap:22px;font-size:.88rem;margin-top:8px;color:rgba(255,255,255,.85)}
 .legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:8px;vertical-align:-1px}
 .wheel small{display:block;margin-top:10px;color:rgba(255,255,255,.55);font-size:.78rem}
 @media(max-width:900px){.res-grid{grid-template-columns:1fr;gap:40px}}
 
 /* ===== HÍBRIDA ===== */
-.hyb{min-height:620px;display:flex;align-items:center;color:#fff;background:var(--night) url(assets/jardin-grupo.jpg) center/cover no-repeat;isolation:isolate;padding:110px 0}
-.hyb:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(34,9,26,.95) 0%,rgba(34,9,26,.78) 45%,rgba(34,9,26,.25) 100%)}
+.hyb{min-height:640px;display:flex;align-items:center;color:#fff;background:var(--night);isolation:isolate;padding:110px 0;overflow:hidden}
+.hyb:before{content:"";position:absolute;top:0;bottom:0;right:0;width:56%;z-index:-1;background:url(assets/mentoria-1a1.jpg) 60% center/cover no-repeat}
+.hyb:after{content:"";position:absolute;top:0;bottom:0;right:0;width:56%;z-index:-1;background:linear-gradient(90deg,var(--night),rgba(34,9,26,0) 30%)}
+.hyb .wrap{width:100%}.hyb .wrap>*{max-width:500px}
 .hyb .lead{max-width:520px}
 .modes{display:grid;gap:14px;margin-top:34px;max-width:520px}
 .mode{display:grid;grid-template-columns:120px 1fr;gap:18px;align-items:baseline;padding:16px 0;border-top:1px solid rgba(255,255,255,.2)}
 .mode b{font:800 .76rem "Nunito Sans";letter-spacing:.18em;text-transform:uppercase;color:var(--mint2)}
 .mode span{font-size:1.05rem;color:rgba(255,255,255,.92)}
-@media(max-width:700px){.hyb:before{background:linear-gradient(0deg,rgba(34,9,26,.96) 30%,rgba(34,9,26,.7))}.mode{grid-template-columns:1fr;gap:4px}}
+@media(max-width:800px){.hyb{padding:300px 0 80px}.hyb:before,.hyb:after{width:100%;height:340px;bottom:auto}.hyb:after{background:linear-gradient(0deg,var(--night),rgba(34,9,26,0) 45%)}.mode{grid-template-columns:1fr;gap:4px}}
 
 /* ===== COACH ===== */
 .coach{padding:120px 0}
@@ -289,9 +294,7 @@ h2 em,h1 em{font-family:var(--serif);font-style:italic;font-weight:500;letter-sp
 
 /* ===== TESTIMONIOS ===== */
 .voices{padding:120px 0;background:var(--cream);overflow:hidden}
-.v-wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px;align-items:center;margin-top:10px}
-.v-photo{border-radius:28px;min-height:460px;background:url(assets/taller.jpg) center/cover no-repeat;position:relative;overflow:hidden}
-.v-photo span{position:absolute;left:18px;bottom:18px;background:rgba(34,9,26,.78);backdrop-filter:blur(6px);color:#fff;font-size:.82rem;padding:8px 14px;border-radius:999px}
+.v-wrap{max-width:900px;margin:30px auto 0;text-align:center}.voices .wrap>.kicker,.voices h2{text-align:center}.voices .wrap{text-align:center}.v-ctrl{justify-content:center}
 .slides{position:relative;min-height:330px}
 .slide{position:absolute;inset:0;opacity:0;transform:translateY(16px);transition:opacity .7s,transform .7s;pointer-events:none}
 .slide.on{opacity:1;transform:none;pointer-events:auto;position:relative}
@@ -304,7 +307,6 @@ h2 em,h1 em{font-family:var(--serif);font-style:italic;font-weight:500;letter-sp
 .v-dots{display:flex;gap:8px;margin-left:12px}
 .v-dots i{width:28px;height:3px;background:#d8c8d2;border-radius:3px;transition:background .3s}
 .v-dots i.on{background:var(--lav)}
-@media(max-width:900px){.v-wrap{grid-template-columns:1fr}.v-photo{min-height:300px}}
 
 /* ===== FAQ ===== */
 .faq{padding:120px 0}
@@ -318,9 +320,9 @@ details p{padding:0 50px 24px 0;color:var(--muted);font-size:1.05rem}
 @media(max-width:900px){.faq-grid{grid-template-columns:1fr;gap:20px}}
 
 /* ===== CTA FINAL ===== */
-.final{padding:130px 0;color:#fff;background:var(--night) url(assets/mujeres.jpg) center 30%/cover no-repeat;isolation:isolate}
-.final:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(34,9,26,.82),rgba(34,9,26,.94) 70%)}
-.final-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.final{padding:130px 0;color:#fff;background:var(--night) url(assets/horizonte.jpg) left center/cover no-repeat;isolation:isolate}
+.final:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(34,9,26,.05) 0%,rgba(34,9,26,.25) 30%,rgba(34,9,26,.9) 50%,rgba(34,9,26,.96) 100%)}
+.final-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;margin-left:42%;max-width:none}
 .steps{list-style:none;margin-top:34px;display:grid;gap:20px;counter-reset:s}
 .steps li{display:grid;grid-template-columns:54px 1fr;gap:16px;align-items:start}
 .steps li:before{counter-increment:s;content:"0" counter(s);font:800 1.05rem var(--display);width:54px;height:54px;border-radius:50%;display:grid;place-items:center;border:1.5px solid var(--gold2);color:var(--gold2)}
@@ -339,7 +341,8 @@ details p{padding:0 50px 24px 0;color:var(--muted);font-size:1.05rem}
 .opt[aria-checked=true] i{border:5px solid var(--lav)}
 .apply .btn{width:100%;margin-top:24px}
 .apply small{display:block;text-align:center;margin-top:12px;color:var(--muted);font-size:.86rem}
-@media(max-width:900px){.final-grid{grid-template-columns:1fr;gap:40px}.apply{padding:28px 22px}}
+@media(max-width:1100px){.final-grid{grid-template-columns:1fr;margin-left:46%}}
+@media(max-width:800px){.final{padding:340px 0 90px;background-position:20% top;background-size:auto 520px;background-color:var(--night)}.final:before{background:linear-gradient(180deg,rgba(34,9,26,0) 0,rgba(34,9,26,.2) 260px,var(--night) 470px)}.final-grid{margin-left:0;gap:40px}.apply{padding:28px 22px}}
 
 /* ===== FOOTER ===== */
 footer{background:var(--night);color:rgba(255,255,255,.78);padding:60px 0 100px;font-size:.95rem}
@@ -366,7 +369,7 @@ footer{background:var(--night);color:rgba(255,255,255,.78);padding:60px 0 100px;
 <!-- NAV -->
 <nav class="nav" id="nav" aria-label="Principal">
   <div class="wrap">
-    <a class="brand" href="https://www.mindfulbymonica.com/"><img src="assets/logo-claro.png" alt="Mindful Wellness"><small>by Monica V.</small></a>
+    <a class="brand" href="https://www.mindfulbymonica.com/"><img src="assets/logo-claro.png" alt="Mindful Wellness"></a>
     <div class="nav-links">
       <a href="#para-quien">Para quién</a>
       <a href="#viaje">El viaje</a>
@@ -398,7 +401,7 @@ footer{background:var(--night);color:rgba(255,255,255,.78);padding:60px 0 100px;
     <div class="facts rv">
       <div><b>8</b><span>semanas guiadas</span></div>
       <div><b>1:1</b><span>sesiones de 60 minutos</span></div>
-      <div><b>3</b><span>encuentros en El Jardín</span></div>
+      <div><b>3</b><span>encuentros presenciales o virtuales</span></div>
       <div><b>90</b><span>días de plan para seguir</span></div>
     </div>
   </div>
@@ -418,7 +421,7 @@ footer{background:var(--night);color:rgba(255,255,255,.78);padding:60px 0 100px;
       <p class="lead rv d2">Evolución se adapta a ti. En la primera sesión eliges tu ruta: crecimiento personal, tu proyecto o tu carrera profesional.</p>
     </div>
     <div class="who-grid">
-      <article class="who-card rv" style="background-image:url(assets/mujeres.jpg)">
+      <article class="who-card rv" style="background-image:url(assets/ruta-personal.jpg);background-position:center 30%">
         <div class="in-c">
           <span class="lbl">Ruta personal</span>
           <h3>Para la mujer que vive para todos… menos para ella</h3>
@@ -426,7 +429,7 @@ footer{background:var(--night);color:rgba(255,255,255,.78);padding:60px 0 100px;
           <ul><li>Recuperas tu confianza y tu voz</li><li>Pones límites sin culpa</li><li>Le das forma a tu nueva etapa</li></ul>
         </div>
       </article>
-      <article class="who-card rv d1" style="background-image:url(assets/profesionales.jpg)">
+      <article class="who-card rv d1" style="background-image:url(assets/ruta-profesional.jpg);background-size:auto 125%;background-position:64% 100%">
         <div class="in-c">
           <span class="lbl">Ruta profesional y de proyecto</span>
           <h3>Para la profesional y emprendedora que sabe que puede más</h3>
@@ -508,7 +511,7 @@ footer{background:var(--night);color:rgba(255,255,255,.78);padding:60px 0 100px;
 
         <article class="wk" id="s1" data-ph="Fase 1 · Claridad" data-sub="Aquí abres la puerta">
           <span class="wk-ph">Fase 1 · Claridad</span>
-          <div class="wk-meta">Semana 1 <span class="pill garden">En El Jardín</span></div>
+          <div class="wk-meta">Semana 1 <span class="pill garden">Presencial o virtual</span></div>
           <h3>Mi punto de partida</h3>
           <p class="d">Miramos tu vida con honestidad y sin juicio con la Rueda de la Vida, tu historia y tus fortalezas. Eliges tu ruta: personal, profesional o de proyecto.</p>
           <div class="wk-take"><div><b>Propósito</b>Ver con claridad dónde estás y qué quieres transformar.</div><div><b>Te llevas</b>Tu plan inicial personalizado.</div></div>
@@ -541,7 +544,7 @@ footer{background:var(--night);color:rgba(255,255,255,.78);padding:60px 0 100px;
         </article>
 
         <article class="wk" id="s5" data-ph="Fase 2 · Confianza" data-sub="Tu idea empieza a caminar">
-          <div class="wk-meta">Semana 5 <span class="pill garden">En El Jardín</span></div>
+          <div class="wk-meta">Semana 5 <span class="pill garden">Presencial o virtual</span></div>
           <h3>Estrategia para mi proyecto</h3>
           <p class="d">Dibujamos el mapa de tu proyecto, tu carrera o tu nueva etapa: para quién es, qué ofreces, qué ya tienes y qué te falta.</p>
           <div class="wk-take"><div><b>Propósito</b>Convertir tu idea en acciones con fecha.</div><div><b>Te llevas</b>Tu plan de acción de 30 días y tu primer paso en 48 horas.</div></div>
@@ -566,7 +569,7 @@ footer{background:var(--night);color:rgba(255,255,255,.78);padding:60px 0 100px;
         </article>
 
         <article class="wk" id="s8" data-ph="Fase 3 · Propósito" data-sub="Celebras a la mujer que eres hoy">
-          <div class="wk-meta">Semana 8 <span class="pill garden">En El Jardín</span></div>
+          <div class="wk-meta">Semana 8 <span class="pill garden">Presencial o virtual</span></div>
           <h3>Celebro y sigo creciendo</h3>
           <p class="d">Comparas tu Rueda de la Vida de la semana 1 con la de hoy, escribes tu declaración de propósito y cerramos con el ritual “Sembrar mi evolución”.</p>
           <div class="wk-take"><div><b>Propósito</b>Ver todo lo que lograste y saber qué sigue.</div><div><b>Te llevas</b>Tu plan de 90 días y una carta para tu futuro.</div></div>
@@ -583,12 +586,12 @@ footer{background:var(--night);color:rgba(255,255,255,.78);padding:60px 0 100px;
     <span class="kicker rv">Tu experiencia</span>
     <h2 class="rv d1">Todo para que <em>no camines sola</em></h2>
     <div class="bento">
-      <div class="tile big rv"><span class="no">01</span><h3>Workbook Evolución</h3><p>Ejercicios, reflexiones y el registro de tu camino, personalizado para lo que tú vas a trabajar.</p></div>
+      <div class="tile big rv"><span class="no">01</span><span class="wb" aria-hidden="true">Workbook</span><h3>Workbook Evolución</h3><p>Ejercicios, reflexiones, cartas y el registro de tu camino, semana a semana. Se personaliza para lo que tú vas a trabajar, porque cada mujer tiene su propia ruta.</p></div>
       <div class="tile rv d1"><span class="no">02</span><h3>8 sesiones 1:1</h3><p>60 minutos de mentoría personalizada, solo para ti.</p></div>
       <div class="tile lav rv d2"><span class="no">03</span><h3>Seguimiento semanal</h3><p>Un mensaje a mitad de semana para no soltar.</p></div>
       <div class="tile rv d1"><span class="no">04</span><h3>Plan inicial personalizado</h3><p>Dónde estás, a dónde vas y qué vas a trabajar.</p></div>
       <div class="tile mint rv d2"><span class="no">05</span><h3>Estrategia para tu proyecto</h3><p>Un mapa claro y un plan de 30 días con fechas.</p></div>
-      <div class="tile photo rv"><span class="no">06</span><h3>Encuentros en El Jardín</h3><p>Tres momentos clave en persona, en un espacio para reflexionar, conectar y florecer.</p></div>
+      <div class="tile photo rv"><span class="no">06</span><h3>Encuentros presenciales o virtuales</h3><p>Tres momentos clave en El Jardín, o desde tu casa si lo prefieres.</p></div>
       <div class="tile rv d1"><span class="no">07</span><h3>Liderazgo y comunicación</h3><p>Límites, tu voz y tu presentación.</p></div>
       <div class="tile rv d2"><span class="no">08</span><h3>Mentalidad y propósito</h3><p>Crecimiento personal desde adentro, con un plan de 90 días.</p></div>
     </div>
@@ -614,14 +617,16 @@ footer{background:var(--night);color:rgba(255,255,255,.78);padding:60px 0 100px;
       <span class="aur a1"></span>
       <h3>Tu Rueda de la Vida</h3>
       <p>La llenas en la semana 1 y otra vez en la semana 8. Lado a lado, con tus propios números, ves cuánto evolucionaste.</p>
-      <svg viewBox="0 0 400 400" role="img" aria-label="Ejemplo de Rueda de la Vida en la semana 1 y en la semana 8">
-        <g id="wheelGrid" stroke="rgba(255,255,255,.14)" fill="none"></g>
-        <polygon class="p1" id="p1"></polygon>
-        <polygon class="p8" id="p8"></polygon>
+      <div class="wh-tabs" role="tablist" aria-label="Ver semana">
+        <button type="button" role="tab" aria-selected="true" data-w="1">Semana 1</button>
+        <button type="button" role="tab" aria-selected="false" data-w="8">Semana 8</button>
+      </div>
+      <svg viewBox="-60 -40 520 480" role="img" aria-label="Ejemplo de Rueda de la Vida">
+        <g id="wheelFill"></g>
+        <g id="wheelGrid" fill="none"></g>
         <g id="wheelLab"></g>
       </svg>
-      <div class="legend"><span><i style="background:var(--gold2)"></i>Semana 1</span><span><i style="background:var(--mint)"></i>Semana 8</span></div>
-      <small>Ejemplo ilustrativo. Tus números serán los tuyos.</small>
+            <small>Ejemplo ilustrativo. Tus números serán los tuyos.</small>
     </div>
   </div>
 </section>
@@ -629,11 +634,11 @@ footer{background:var(--night);color:rgba(255,255,255,.78);padding:60px 0 100px;
 <!-- HÍBRIDA -->
 <section class="hyb dark">
   <div class="wrap">
-    <span class="kicker rv">Mentoría híbrida</span>
-    <h2 class="rv d1">Desde tu casa <em>y en El Jardín</em></h2>
-    <p class="lead rv d2">Tres momentos clave los vivimos en persona, en El Jardín Mentes Poderosas: un espacio pensado para reflexionar, conectar y florecer.</p>
+    <span class="kicker rv">Mentoría 1:1</span>
+    <h2 class="rv d1">Tú y yo, <em>presencial o virtual</em></h2>
+    <p class="lead rv d2">Cada sesión es solo entre tú y yo. Tres encuentros clave pueden ser presenciales, en El Jardín Mentes Poderosas, o virtuales si lo prefieres.</p>
     <div class="modes rv d3">
-      <div class="mode"><b>En El Jardín</b><span>Semanas 1, 5 y 8, en Wallington, NJ.</span></div>
+      <div class="mode"><b>Encuentros</b><span>Semanas 1, 5 y 8: presenciales en Wallington, NJ, o virtuales.</span></div>
       <div class="mode"><b>Virtual</b><span>Semanas 2, 3, 4, 6 y 7, desde tu espacio.</span></div>
       <div class="mode"><b>¿Vives lejos?</b><span>Todo puede ser virtual, en español o en inglés.</span></div>
     </div>
@@ -649,8 +654,8 @@ footer{background:var(--night);color:rgba(255,255,255,.78);padding:60px 0 100px;
       <div class="coach-txt">
         <span class="kicker rv">Tu guía en este viaje</span>
         <h2 class="rv d1">Mónica Villalba</h2>
-        <div class="role rv d1">Coach certificada de Salud y Bienestar · Mentora · Fundadora de Mindful Wellness</div>
-        <p class="rv d2">Especialista en desarrollo humano, liderazgo y hábitos de transformación. Con formación en psicología y más de 25 años acompañando a mujeres, familias, profesionales y comunidades en Colombia, Venezuela y Estados Unidos, hoy guía a mujeres que quieren descubrir su potencial y construir la vida que desean.</p>
+        <div class="role rv d1">Psicóloga en Colombia · Health &amp; Wellness Coach certificada en EE. UU. · Fundadora de Mindful Wellness</div>
+        <p class="rv d2">Psicóloga en Colombia, su país de origen, y Health &amp; Wellness Coach certificada en Estados Unidos. Especialista en desarrollo humano, liderazgo y hábitos de transformación, con más de 25 años acompañando a mujeres, familias, profesionales y comunidades en Colombia, Venezuela y Estados Unidos. Hoy guía a mujeres que quieren descubrir su potencial y construir la vida que desean.</p>
         <div class="stats rv d2">
           <div><b>25+</b><span>años acompañando personas</span></div>
           <div><b>2020</b><span>fundó Mindful Wellness</span></div>
@@ -668,17 +673,17 @@ footer{background:var(--night);color:rgba(255,255,255,.78);padding:60px 0 100px;
     <span class="kicker rv">Lo que dicen de Mónica</span>
     <h2 class="rv d1">Voces que <em>ya evolucionaron</em></h2>
     <div class="v-wrap">
-      <div class="v-photo rv"><span>Taller con Mónica en Wallington, NJ</span></div>
-      <div class="rv d1">
+      <div class="rv d1 v-one">
         <div class="slides" id="slides">
-          <figure class="slide on"><q>Mónica es una persona encantadora y amable que te hará sentir bienvenida y escuchada sin juzgarte. Lo que la hace diferente es su fuerte intuición: puede leer más allá de las palabras y llegar a la raíz. Si estás lista para dar el siguiente paso hacia tus metas, ¡Mónica es tu persona!</q><figcaption class="who-q">Lynda Lawrence<small>Co-founder, Yoga Share</small></figcaption></figure>
+          <figure class="slide on"><q>Considero que soy una mujer más organizada: aprendí a enfocar mis habilidades en lo que realmente quiero conseguir con mi proyecto y a crear planes de acción concretos. Sencillamente, gracias: fue un dinero y un tiempo muy bien invertidos.</q><figcaption class="who-q">Carolina<small>Programa Evolución · 2026</small></figcaption></figure>
+          <figure class="slide"><q>Mónica es una persona encantadora y amable que te hará sentir bienvenida y escuchada sin juzgarte. Lo que la hace diferente es su fuerte intuición: puede leer más allá de las palabras y llegar a la raíz. Si estás lista para dar el siguiente paso hacia tus metas, ¡Mónica es tu persona!</q><figcaption class="who-q">Lynda Lawrence<small>Co-founder, Yoga Share</small></figcaption></figure>
           <figure class="slide"><q>Le agradezco a Dios todos los días por ponerte en mi camino. Mónica, gracias por todo lo que hiciste por mí. Sé que continuarás ayudando a mujeres como yo a superar los obstáculos que parecen no tener salida.</q><figcaption class="who-q">Cliente de Mónica<small>Nueva York</small></figcaption></figure>
           <figure class="slide"><q>Estoy muy agradecida por sus enseñanzas. Haber sido su estudiante fue muy grato para mí y no lo dudaría en volver a serlo y aprender mucho de usted.</q><figcaption class="who-q">Margarita Rosado<small>Estudiante · Entrenamiento de 3 meses</small></figcaption></figure>
         </div>
         <div class="v-ctrl">
           <button type="button" id="vPrev" aria-label="Anterior">←</button>
           <button type="button" id="vNext" aria-label="Siguiente">→</button>
-          <div class="v-dots" id="vDots"><i class="on"></i><i></i><i></i></div>
+          <div class="v-dots" id="vDots"><i class="on"></i><i></i><i></i><i></i></div>
         </div>
       </div>
     </div>
@@ -711,12 +716,12 @@ footer{background:var(--night);color:rgba(255,255,255,.78);padding:60px 0 100px;
   <div class="wrap final-grid">
     <div>
       <span class="kicker rv">Tu siguiente paso</span>
-      <h2 class="rv d1">Tu evolución empieza <em>con una conversación</em></h2>
+      <h2 class="rv d1" style="font-size:clamp(2rem,3.4vw,3rem)">Tu meta está más cerca <em>de lo que crees</em></h2>
       <p class="lead rv d2">Abro pocos lugares para acompañar a cada mujer de verdad. Reserva tu llamada y descubramos juntas tu camino.</p>
       <ol class="steps">
         <li class="rv"><div><b>Llamada gratuita de 20 minutos</b><span>Me cuentas dónde estás y qué quieres lograr.</span></div></li>
         <li class="rv d1"><div><b>Diseñamos tu ruta</b><span>Si Evolución es para ti, te explico todo y reservas tu lugar.</span></div></li>
-        <li class="rv d2"><div><b>Empiezas en El Jardín</b><span>Tu primera sesión, en persona o virtual.</span></div></li>
+        <li class="rv d2"><div><b>Empiezas tu evolución</b><span>Tu primera sesión, presencial o virtual.</span></div></li>
       </ol>
     </div>
     <form class="apply rv d1" id="apply" novalidate>
@@ -739,7 +744,7 @@ footer{background:var(--night);color:rgba(255,255,255,.78);padding:60px 0 100px;
 <footer>
   <div class="wrap">
     <div class="f-grid">
-      <div class="f-brand"><img src="assets/logo-claro.png" alt="Mindful Wellness"><small>by Monica V.</small></div>
+      <div class="f-brand"><img src="assets/logo-claro.png" alt="Mindful Wellness"></div>
       <div class="f-links">
         <a href="https://wa.me/12016799969" target="_blank" rel="noopener">WhatsApp 201-679-9969</a>
         <a href="https://instagram.com/mindfulwellnessnyc" target="_blank" rel="noopener">@mindfulwellnessnyc</a>
@@ -809,15 +814,23 @@ footer{background:var(--night);color:rgba(255,255,255,.78);padding:60px 0 100px;
   }
   window.addEventListener('scroll',journey,{passive:true}); window.addEventListener('resize',journey); journey();
 
-  // rueda de la vida (ejemplo)
-  var areas=['Salud','Carrera','Finanzas','Familia','Pareja','Amistades','Crecimiento','Diversión'], w1=[5,4,4,6,5,4,3,3], w8=[7,8,6,8,7,6,9,7];
-  var C=200,R=118,g=$('#wheelGrid'),labs=$('#wheelLab'),ns='http://www.w3.org/2000/svg';
-  function pt(i,v){var a=-Math.PI/2+i*2*Math.PI/8;return [C+Math.cos(a)*R*v/10, C+Math.sin(a)*R*v/10]}
-  [2,4,6,8,10].forEach(function(l){var p=document.createElementNS(ns,'polygon');p.setAttribute('points',areas.map(function(_,i){return pt(i,l).join(',')}).join(' '));g.appendChild(p)});
-  areas.forEach(function(a,i){var l=document.createElementNS(ns,'line'),e=pt(i,10);l.setAttribute('x1',C);l.setAttribute('y1',C);l.setAttribute('x2',e[0]);l.setAttribute('y2',e[1]);g.appendChild(l);
-    var t=document.createElementNS(ns,'text'),q=pt(i,12.2);t.setAttribute('x',q[0]);t.setAttribute('y',q[1]+4);t.setAttribute('text-anchor',Math.abs(q[0]-C)<5?'middle':(q[0]<C?'end':'start'));t.setAttribute('class','lab');t.textContent=a;labs.appendChild(t)});
-  $('#p1').setAttribute('points',w1.map(function(v,i){return pt(i,v).join(',')}).join(' '));
-  $('#p8').setAttribute('points',w8.map(function(v,i){return pt(i,v).join(',')}).join(' '));
+  // rueda de la vida (ejemplo): círculo dividido en 8 áreas que se llenan del centro hacia afuera
+  var areas=['Salud','Carrera','Finanzas','Familia','Pareja','Amistades','Crecimiento','Diversión'], W={1:[5,4,4,6,5,4,3,3],8:[7,8,6,8,7,6,9,7]};
+  var cols=['#b256a7','#C9A45C','#75d375','#d77fb9','#9b6bd1','#E7D3A6','#5fbf8f','#e39a6b'];
+  var C=200,R=180,ns='http://www.w3.org/2000/svg',fill=$('#wheelFill'),grid=$('#wheelGrid'),labs=$('#wheelLab'),segs=[];
+  function P(a,r){return (C+Math.cos(a)*r).toFixed(2)+' '+(C+Math.sin(a)*r).toFixed(2)}
+  function wedge(i,r){var a0=-Math.PI/2+i*Math.PI/4+.012,a1=a0+Math.PI/4-.024;return 'M'+C+' '+C+' L'+P(a0,r)+' A'+r+' '+r+' 0 0 1 '+P(a1,r)+' Z'}
+  for(var k=1;k<=10;k++){var c=document.createElementNS(ns,'circle');c.setAttribute('cx',C);c.setAttribute('cy',C);c.setAttribute('r',R*k/10);c.setAttribute('stroke',k===10?'rgba(255,255,255,.5)':'rgba(255,255,255,.12)');c.setAttribute('stroke-width',k===10?2:1);grid.appendChild(c)}
+  areas.forEach(function(a,i){
+    var ang=-Math.PI/2+i*Math.PI/4,l=document.createElementNS(ns,'line');l.setAttribute('x1',C);l.setAttribute('y1',C);l.setAttribute('x2',C+Math.cos(ang)*R);l.setAttribute('y2',C+Math.sin(ang)*R);l.setAttribute('stroke','rgba(255,255,255,.3)');grid.appendChild(l);
+    var bg=document.createElementNS(ns,'path');bg.setAttribute('d',wedge(i,R));bg.setAttribute('fill','rgba(255,255,255,.05)');fill.appendChild(bg);
+    var sg=document.createElementNS(ns,'path');sg.setAttribute('class','seg');sg.setAttribute('fill',cols[i]);sg.setAttribute('fill-opacity','.88');sg.setAttribute('d',wedge(i,R*W[1][i]/10));fill.appendChild(sg);segs.push(sg);
+    var mid=ang+Math.PI/8,q=[C+Math.cos(mid)*(R+16),C+Math.sin(mid)*(R+16)],t=document.createElementNS(ns,'text');
+    t.setAttribute('x',q[0]);t.setAttribute('y',q[1]+4);t.setAttribute('text-anchor',Math.abs(q[0]-C)<30?'middle':(q[0]<C?'end':'start'));t.setAttribute('class','lab');t.textContent=a;labs.appendChild(t)});
+  function setW(w){segs.forEach(function(sg,i){sg.setAttribute('d',wedge(i,R*W[w][i]/10))});$$('.wh-tabs button').forEach(function(b){b.setAttribute('aria-selected',String(b.dataset.w==w))})}
+  var wcur=1,wauto;
+  $$('.wh-tabs button').forEach(function(b){b.addEventListener('click',function(){clearInterval(wauto);wcur=+b.dataset.w;setW(wcur)})});
+  if('IntersectionObserver' in window){var wio=new IntersectionObserver(function(es){if(es[0].isIntersecting){wauto=setInterval(function(){wcur=wcur===1?8:1;setW(wcur)},3500);wio.disconnect()}},{threshold:.4});wio.observe($('#wheel'))}
 
   // testimonios
   var sl=$$('#slides .slide'), dots=$$('#vDots i'), si=0, tm;
