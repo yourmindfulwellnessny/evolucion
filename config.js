@@ -14,9 +14,9 @@ window.CONFIG = {
   //   cuotas   = enlace del plan en cuotas (solo si activaste las cuotas arriba)
   // Si un enlace está vacío "", el botón de tarjeta abre WhatsApp para coordinar el pago.
   // En Stripe, en "After payment" elige "Don't show confirmation page" y pon esta dirección:
-  //   https://yourmindfulwellnessny.github.io/evolucion/gracias.html?session_id={CHECKOUT_SESSION_ID}
+  //   https://www.mindfulbymonica.com/evolucion/gracias.html?session_id={CHECKOUT_SESSION_ID}
   stripe: {
-    completo: "",
+    completo: "https://book.stripe.com/14A4gA6EVfsMgAg0e2enS0q",
     cuotas: ""
   },
 
