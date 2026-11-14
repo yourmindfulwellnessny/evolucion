@@ -7,4 +7,4 @@ Página del programa Evolución: 8 semanas de mentoría individual con Monica Vi
 - `config.js`: precio, cuotas, enlaces de pago de Stripe, Zelle, hoja de registro y WhatsApp
 - `assets/`: logo, foto de Monica, portada del workbook, jardín y código QR de Zelle
 
-Publicada con GitHub Pages en https://yourmindfulwellnessny.github.io/evolucion/
+Publicada con GitHub Pages en https://www.mindfulbymonica.com/evolucion/
