@@ -321,8 +321,8 @@ details p{padding:0 50px 22px 0;color:var(--muted);font-size:1.03rem}
 @media(max-width:900px){.faq-grid{grid-template-columns:1fr;gap:20px}details p{padding-right:0}}
 
 /* ===== CTA FINAL ===== */
-.final{padding:84px 0;color:#fff;background:var(--night) url(assets/jardin-grupo.jpg) center 30%/cover no-repeat;isolation:isolate}
-.final:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(34,9,26,.95) 0%,rgba(34,9,26,.88) 50%,rgba(34,9,26,.7) 100%)}
+.final{padding:84px 0;color:#fff;background:radial-gradient(circle at 85% 20%,rgba(178,86,167,.45),transparent 50%),radial-gradient(circle at 10% 100%,rgba(117,211,117,.16),transparent 45%),var(--night);isolation:isolate}
+
 .final-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
 .steps{list-style:none;margin-top:30px;display:grid;gap:20px;counter-reset:s}
 .steps li{display:grid;grid-template-columns:54px 1fr;gap:16px;align-items:start}
@@ -345,7 +345,7 @@ details p{padding:0 50px 22px 0;color:var(--muted);font-size:1.03rem}
 .opt[aria-checked=true] i{border:5px solid var(--lav)}
 .apply .btn{width:100%;margin-top:22px}
 .apply small{display:block;text-align:center;margin-top:12px;color:var(--muted);font-size:.84rem}
-@media(max-width:900px){.final-grid{grid-template-columns:1fr;gap:44px}.apply{padding:28px 22px}.final:before{background:rgba(34,9,26,.9)}}
+@media(max-width:900px){.final-grid{grid-template-columns:1fr;gap:44px}.apply{padding:28px 22px}}
 @media(max-width:420px){.opts.two{grid-template-columns:1fr}}
 
 /* ===== FOOTER ===== */
